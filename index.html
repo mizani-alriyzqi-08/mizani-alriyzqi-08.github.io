@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Mizani Portfolio</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+body {
+  background: radial-gradient(circle at 20% 20%, #312e81, #020617);
+  overflow-x: hidden;
+}
+
+/* GRID */
+.grid-bg {
+  background-image: linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* GLOW TEXT */
+.glow {
+  text-shadow: 0 0 25px rgba(168,85,247,0.8);
+}
+
+/* BUTTON */
+.btn-glow {
+  box-shadow: 0 0 20px rgba(139,92,246,0.6);
+  transition: 0.3s;
+}
+.btn-glow:hover {
+  transform: translateY(-3px) scale(1.05);
+}
+
+/* ANIMATION */
+.fade-up {
+  animation: fadeUp 1s ease forwards;
+}
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+</style>
+</head>
+
+<body class="text-white">
+
+<!-- NAVBAR -->
+<nav class="flex justify-between p-6 absolute w-full z-10">
+  <h1 class="text-purple-400 font-bold text-xl">Mizani Alriyzqi</h1>
+
+  <div class="space-x-6 text-sm">
+    <a class="text-purple-400 border-b-2 border-purple-400 pb-1">Home</a>
+    <a href="#about">About</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="grid-bg min-h-screen flex items-center px-10 md:px-20">
+
+<div class="grid md:grid-cols-2 items-center w-full">
+
+<!-- LEFT -->
+<div class="fade-up">
+
+<div class="mb-6 inline-block px-4 py-2 rounded-full border border-purple-500 text-sm text-purple-300">
+✨ Ready to Innovate
+</div>
+
+<h1 class="text-5xl md:text-6xl font-bold leading-tight">
+Frontend <br>
+<span class="text-purple-400 glow">Developer</span>
+</h1>
+
+<p class="mt-4 text-lg opacity-80">
+Network & Telecom Student
+</p>
+
+<p class="mt-4 max-w-md opacity-60">
+Menciptakan website inovatif, modern, dan user-friendly untuk solusi digital.
+</p>
+
+<!-- SKILLS -->
+<div class="flex gap-3 mt-6 flex-wrap">
+<span class="px-3 py-1 border border-gray-600 rounded-full text-sm hover:bg-purple-500 hover:border-purple-500 transition">React</span>
+<span class="px-3 py-1 border border-gray-600 rounded-full text-sm hover:bg-purple-500 hover:border-purple-500 transition">Javascript</span>
+<span class="px-3 py-1 border border-gray-600 rounded-full text-sm hover:bg-purple-500 hover:border-purple-500 transition">Node.js</span>
+<span class="px-3 py-1 border border-gray-600 rounded-full text-sm hover:bg-purple-500 hover:border-purple-500 transition">Tailwind</span>
+<span class="px-3 py-1 border border-gray-600 rounded-full text-sm hover:bg-purple-500 hover:border-purple-500 transition">Vue</span>
+</div>
+
+<!-- BUTTON -->
+<div class="flex gap-4 mt-8">
+<a href="#portfolio" class="px-6 py-3 bg-purple-600 rounded-lg btn-glow">Projects ↗</a>
+<a href="#contact" class="px-6 py-3 border border-gray-500 rounded-lg hover:bg-white hover:text-black transition">Contact ✉</a>
+</div>
+
+</div>
+
+<!-- RIGHT -->
+<div class="hidden md:flex justify-center items-end h-full">
+
+  <div class="relative">
+
+    <!-- GLOW -->
+    <div class="absolute -inset-10 bg-purple-600 opacity-20 blur-3xl rounded-full"></div>
+
+    <!-- FOTO -->
+<img src="assets/img/Young man in relaxed gaze.png"
+     class="relative w-full max-w-[1100px] md:max-w-[1400px] object-contain translate-y-6 translate-x-15 scale-110">
+
+  </div>
+
+</div>
+</section>
+<section id="about" class="grid-bg py-24 px-10 md:px-20">
+
+  <div class="max-w-5xl mx-auto text-center">
+    
+    <h2 class="text-4xl font-bold mb-6">
+      About <span class="text-purple-400 glow">Me</span>
+    </h2>
+
+    <p class="opacity-70 leading-relaxed">
+      Saya adalah seorang Frontend Developer yang fokus pada pembuatan website modern,
+      responsive, dan user-friendly. Saya memiliki pengalaman menggunakan teknologi
+      seperti React, Laravel, dan Tailwind CSS untuk membangun aplikasi web yang efisien
+      dan menarik secara visual.
+    </p>
+
+  </div>
+
+</section>
+<section id="portfolio" class="grid-bg py-24 px-10 md:px-20">
+
+  <h2 class="text-4xl font-bold text-center mb-16">
+    My <span class="text-purple-400 glow">Projects</span>
+  </h2>
+
+  <div class="grid md:grid-cols-3 gap-8">
+
+    <!-- CARD 1 -->
+    <div class="bg-gray-900 p-5 rounded-xl border border-gray-800">
+      <img src="https://via.placeholder.com/400" class="rounded-lg mb-4">
+      <h3 class="text-lg font-semibold">Website Wisata</h3>
+      <p class="text-sm opacity-60">Booking wisata dengan Laravel & MySQL</p>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="bg-gray-900 p-5 rounded-xl border border-gray-800">
+      <img src="https://via.placeholder.com/400" class="rounded-lg mb-4">
+      <h3 class="text-lg font-semibold">Portfolio Web</h3>
+      <p class="text-sm opacity-60">Website portfolio modern dengan Tailwind</p>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="bg-gray-900 p-5 rounded-xl border border-gray-800">
+      <img src="https://via.placeholder.com/400" class="rounded-lg mb-4">
+      <h3 class="text-lg font-semibold">Admin Dashboard</h3>
+      <p class="text-sm opacity-60">CRUD system dengan Laravel</p>
+    </div>
+
+  </div>
+
+</section>
+<section id="contact" class="grid-bg py-24 px-10 md:px-20 text-center">
+
+  <h2 class="text-4xl font-bold mb-6">
+    Contact <span class="text-purple-400 glow">Me</span>
+  </h2>
+
+  <p class="opacity-70 mb-8">
+    Punya project? Hubungi saya!
+  </p>
+
+  <div class="space-y-4">
+    <p>Email: <span class="text-purple-400">mizanialriyzqi@gmail.com</span></p>
+    <p>Instagram: <span class="text-purple-400">@mizanialriyzqi</span></p>
+    <p>GitHub: <span class="text-purple-400">github.com/mizanialriyzqi</span></p>
+  </div>
+
+</section>
+
+</body>
+</html>
