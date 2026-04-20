@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mizani Alriyqi - Portfolio</title>
+<link rel="stylesheet" href="output.css">
+
+<style>
+.typing::after {
+  content: "|";
+  margin-left: 5px;
+  animation: blink 1s infinite;
+}
+@keyframes blink {
+  50% { opacity: 0; }
+}
+</style>
+</head>
+
+<body class="bg-[#020617] text-slate-200 relative overflow-x-hidden pt-20">
+
+    <div class="absolute inset-0 -z-10 overflow-hidden">
+
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+
+</div>
+
+<!-- GRID -->
+<div class="absolute inset-0 -z-10 
+bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] 
+bg-[size:40px_40px] opacity-20"></div>
+
+<!-- FLOATING SHAPES -->
+
+<!-- GLOW -->
+<div class="absolute top-20 left-10 w-72 h-72 bg-[#3EC1D3] opacity-20 blur-3xl rounded-full -z-10"></div>
+<div class="absolute bottom-20 right-10 w-72 h-72 bg-purple-500 opacity-10 blur-3xl rounded-full -z-10"></div>
+
+<!-- NAV -->
+<section class="w-full flex justify-center fixed top-0 z-50">
+<nav class="h-16 w-[90%] bg-[#0F172A]/70 backdrop-blur-xl mt-4 rounded-2xl border border-white/10 
+shadow-[0_10px_40px_rgba(0,0,0,0.3)] px-6 flex items-center justify-between">
+
+    <!-- LOGO -->
+    <img src="assets/img/Logo MA.png" class="h-12 w-auto">
+
+    <!-- MENU (DESKTOP) -->
+    <div id="menu" class="hidden md:flex space-x-8">
+        <a href="#about" class="hover:text-[#3EC1D3]">About</a>
+        <a href="#skill" class="hover:text-[#3EC1D3]">Skills</a>
+        <a href="#work" class="hover:text-[#3EC1D3]">Work</a>
+        <a href="#contact" class="hover:text-[#3EC1D3]">Contact</a>
+    </div>
+
+    <!-- HAMBURGER BUTTON -->
+    <button id="btn" class="md:hidden text-white">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none"
+             viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+    </button>
+
+    <!-- BUTTON -->
+    <a href="#contact" class="hidden md:block bg-[#3EC1D3] px-4 py-2 rounded-xl">
+        Hire Me
+    </a>
+
+</nav>
+<div id="mobile" 
+     class="fixed top-20 left-1/2 -translate-x-1/2 w-[90%] 
+     bg-[#0F172A]/95 backdrop-blur-xl rounded-xl p-4 
+     flex flex-col space-y-3 text-center 
+     opacity-0 scale-95 pointer-events-none 
+     transition-all duration-300 md:hidden">
+
+    <a href="#about">About</a>
+    <a href="#skill">Skills</a>
+    <a href="#work">Work</a>
+    <a href="#contact">Contact</a>
+
+</div>
+</section>
+
+<!-- HERO -->
+<section class="min-h-screen flex items-center justify-center px-6 pt-24">
+<div class="max-w-6xl w-full grid md:grid-cols-2 gap-10 items-center">
+
+<!-- TEXT -->
+<div>
+<h1 class="text-4xl md:text-6xl font-semibold mb-4">
+Hi, I'm <span class="text-[#3EC1D3]">Mizani</span>
+</h1>
+
+<h2 class="text-xl md:text-2xl mb-4">
+I'm <span id="typing" class="text-[#3EC1D3] typing"></span>
+</h2>
+
+<p class="text-gray-400 mb-6">
+Web Developer & Designer creating modern web experiences.
+</p>
+
+<a href="#work" class="bg-[#3EC1D3] px-6 py-3 rounded-xl 
+hover:bg-[#2aa9bb] transition 
+shadow-[0_0_20px_rgba(62,193,211,0.3)]">
+View Work
+</a>
+</div>
+
+<!-- IMAGE -->
+<div class="flex justify-center relative">
+
+<div class="absolute w-72 h-72 bg-[#3EC1D3] blur-3xl opacity-20 rounded-full"></div>
+
+<div class="relative bg-[#0F172A]/80 backdrop-blur-xl p-4 rounded-2xl 
+border border-white/10 
+hover:scale-105 hover:rotate-1 transition">
+
+<span class="absolute top-3 left-3 bg-[#3EC1D3] text-xs px-3 py-1 rounded-full">
+Available
+</span>
+
+<img src="assets/img/myphoto.jpeg" class="rounded-xl w-72 h-80 object-cover">
+
+<div class="mt-4">
+<h3 class="font-semibold">Mizani Alriyqi</h3>
+<p class="text-gray-400 text-sm">Web Developer</p>
+</div>
+
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="py-20 px-6 text-center">
+<h2 class="text-3xl font-semibold mb-6">About Me</h2>
+<p class="text-gray-400 max-w-2xl mx-auto">
+Saya adalah web developer yang fokus membuat website modern dan responsive.
+</p>
+</section>
+
+<section id="skill" class="py-20 px-6 bg-[#0F172A]">
+    <h2 class="text-3xl md:text-4xl font-semibold mb-10 text-center">
+        Skills
+    </h2>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+
+        <!-- CARD -->
+        <div class="bg-[#020617]/80 backdrop-blur-md p-6 rounded-xl text-center 
+        border border-white/5 
+        hover:border-[#3EC1D3]/40 
+        hover:shadow-[0_0_20px_rgba(62,193,211,0.25)] 
+        hover:-translate-y-2 
+        transition duration-300">
+
+            <p class="text-lg font-medium">HTML</p>
+        </div>
+
+        <div class="bg-[#020617]/80 backdrop-blur-md p-6 rounded-xl text-center 
+        border border-white/5 
+        hover:border-[#3EC1D3]/40 
+        hover:shadow-[0_0_20px_rgba(62,193,211,0.25)] 
+        hover:-translate-y-2 
+        transition duration-300">
+
+            <p class="text-lg font-medium">CSS</p>
+        </div>
+
+        <div class="bg-[#020617]/80 backdrop-blur-md p-6 rounded-xl text-center 
+        border border-white/5 
+        hover:border-[#3EC1D3]/40 
+        hover:shadow-[0_0_20px_rgba(62,193,211,0.25)] 
+        hover:-translate-y-2 
+        transition duration-300">
+
+            <p class="text-lg font-medium">JavaScript</p>
+        </div>
+
+        <div class="bg-[#020617]/80 backdrop-blur-md p-6 rounded-xl text-center 
+        border border-white/5 
+        hover:border-[#3EC1D3]/40 
+        hover:shadow-[0_0_20px_rgba(62,193,211,0.25)] 
+        hover:-translate-y-2 
+        transition duration-300">
+
+            <p class="text-lg font-medium">Laravel</p>
+        </div>
+        <div class="bg-[#020617]/80 backdrop-blur-md p-6 rounded-xl text-center 
+        border border-white/5 
+        hover:border-[#3EC1D3]/40 
+        hover:shadow-[0_0_20px_rgba(62,193,211,0.25)] 
+        hover:-translate-y-2 
+        transition duration-300">
+
+            <p class="text-lg font-medium">Tailwind</p>
+        </div>
+
+        <div class="bg-[#020617]/80 backdrop-blur-md p-6 rounded-xl text-center 
+        border border-white/5 
+        hover:border-[#3EC1D3]/40 
+        hover:shadow-[0_0_20px_rgba(62,193,211,0.25)] 
+        hover:-translate-y-2 
+        transition duration-300">
+
+            <p class="text-lg font-medium">Vue</p>
+        </div>
+
+        <div class="bg-[#020617]/80 backdrop-blur-md p-6 rounded-xl text-center 
+        border border-white/5 
+        hover:border-[#3EC1D3]/40 
+        hover:shadow-[0_0_20px_rgba(62,193,211,0.25)] 
+        hover:-translate-y-2 
+        transition duration-300">
+
+            <p class="text-lg font-medium">Redist</p>
+        </div>
+
+        <div class="bg-[#020617]/80 backdrop-blur-md p-6 rounded-xl text-center 
+        border border-white/5 
+        hover:border-[#3EC1D3]/40 
+        hover:shadow-[0_0_20px_rgba(62,193,211,0.25)] 
+        hover:-translate-y-2 
+        transition duration-300">
+
+            <p class="text-lg font-medium">PostgreSQL</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- WORK -->
+<section id="work" class="py-20 px-6 text-center scroll-mt-24">
+    <h2 class="text-3xl md:text-4xl font-semibold mb-12">Recent Work</h2>
+
+    <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+
+        <!-- PROJECT 1 -->
+       <div class="group relative overflow-hidden rounded-2xl border border-white/10 
+hover:shadow-[0_0_25px_rgba(62,193,211,0.25)] transition duration-300 hover:-translate-y-2 ">
+
+    <!-- SLIDER -->
+    <div class="relative w-full h-56">
+
+        <!-- GAMBAR -->
+        <img id="sppg-img" src="assets/img/sppg1.png"
+             class="w-full h-full object-cover transition duration-700">
+
+        <!-- DOTS (INI DIA POSISINYA) -->
+        <div class="absolute bottom-3 w-full flex justify-center gap-2 z-10">
+            <span id="dot1" class="w-2 h-2 bg-white rounded-full opacity-100"></span>
+            <span id="dot2" class="w-2 h-2 bg-white rounded-full opacity-40"></span>
+        </div>
+
+    </div>
+
+    <!-- OVERLAY -->
+    <div class="absolute inset-0 bg-black/70 opacity-0 
+                group-hover:opacity-100 transition duration-300 
+                flex flex-col justify-center items-center">
+
+        <h3 class="text-lg font-semibold mb-2">SPPG Dashboard</h3>
+
+        <div class="flex gap-3">
+            <a href="#" class="bg-[#3EC1D3] px-4 py-2 rounded-lg text-sm">Demo</a>
+            <a href="#" class="border px-4 py-2 rounded-lg text-sm">Github</a>
+        </div>
+    </div>
+
+</div>
+
+       <!-- PROJECT 2 -->
+<div class="group relative overflow-hidden rounded-2xl border border-white/10 
+hover:shadow-[0_0_25px_rgba(62,193,211,0.25)] transition duration-300 hover:-translate-y-2 ">
+
+    <!-- IMAGE -->
+    <img src="assets/img/porto1.png" 
+         class="w-full h-56 object-cover group-hover:scale-110 transition duration-500">
+
+    <!-- OVERLAY -->
+    <div class="absolute inset-0 bg-black/70 opacity-0 
+                group-hover:opacity-100 transition duration-300 
+                flex flex-col justify-center items-center">
+
+        <h3 class="text-lg font-semibold mb-2">Portfolio Website</h3>
+
+        <p class="text-sm text-gray-300 mb-4 px-4 text-center">
+            Website portfolio modern dengan Tailwind CSS dan animasi interaktif.
+        </p>
+
+        <div class="flex gap-3">
+            <a href="#" 
+               class="bg-[#3EC1D3] px-4 py-2 rounded-lg text-sm hover:bg-[#2aa9bb] transition">
+                Demo
+            </a>
+
+            <a href="#" 
+               class="border border-white px-4 py-2 rounded-lg text-sm 
+               hover:bg-white hover:text-black transition">
+                Github
+            </a>
+        </div>
+    </div>
+
+</div>
+
+</section>  
+
+<!-- CONTACT -->
+<section id="contact" class="py-20 px-6 bg-[#0F172A] text-center scroll-mt-24">
+    <h2 class="text-3xl md:text-4xl font-semibold mb-6">Contact Me</h2>
+    <p class="text-gray-400 mb-10">Feel free to reach out 🚀</p>
+
+    <div class="flex flex-col md:flex-row justify-center items-center gap-6">
+
+        <!-- EMAIL -->
+        <a href="mailto:mizanialriyzqi@gmail.com"
+           class="flex items-center gap-3 bg-[#020617]/80 backdrop-blur-md px-6 py-4 rounded-xl 
+           border border-white/10 hover:border-[#3EC1D3]/40 
+           hover:scale-105 hover:-translate-y-1 
+           transition duration-300">
+
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-[#3EC1D3]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                      d="M3 8l9 6 9-6M4 6h16v12H4z"/>
+            </svg>
+
+            <span class="text-gray-300">mizanialriyzqi@gmail.com</span>
+        </a>
+
+        <!-- GITHUB -->
+        <a href="https://github.com/mizanialriyzqi" target="_blank"
+           class="flex items-center gap-3 bg-[#020617]/80 backdrop-blur-md px-6 py-4 rounded-xl 
+           border border-white/10 hover:border-[#3EC1D3]/40 
+           hover:scale-105 hover:-translate-y-1 
+           transition duration-300">
+
+            <svg xmlns="http://www.w3.org/2000/svg" 
+     viewBox="0 0 24 24" 
+     fill="currentColor" 
+     class="w-6 h-6 text-[#3EC1D3]">
+  <path d="M12 .5C5.73.5.75 5.48.75 11.75c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55 
+  0-.27-.01-1.17-.02-2.12-3.2.7-3.87-1.54-3.87-1.54-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 
+  1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.67 1.25 3.32.96.1-.74.4-1.25.72-1.54-2.56-.29-5.25-1.28-5.25-5.7 
+  0-1.26.45-2.28 1.18-3.08-.12-.29-.51-1.47.11-3.06 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 5.74 0c2.19-1.49 
+  3.15-1.18 3.15-1.18.62 1.59.23 2.77.11 3.06.73.8 1.18 1.82 1.18 3.08 0 4.43-2.7 5.4-5.27 5.69.41.36.77 1.08.77 2.18 
+  0 1.57-.01 2.83-.01 3.22 0 .3.21.66.79.55a11.27 11.27 0 0 0 7.85-10.91C23.25 5.48 18.27.5 12 .5z"/>
+</svg>
+
+            <span class="text-gray-300">github.com/mizanialriyzqi</span>
+        </a>
+
+    </div>
+</section>
+
+<footer class="py-6 text-center text-gray-500">
+© 2026 Mizani Alriyzqi
+</footer>
+
+</body>
+
+<script>
+const texts = ["Web Developer", "UI Designer", "Freelancer"];
+let i = 0, j = 0, del = false;
+
+function type(){
+let t = texts[i];
+document.getElementById("typing").textContent = t.substring(0,j);
+
+if(!del && j++ === t.length){
+del = true; setTimeout(type,1000); return;
+}
+if(del && j-- === 0){
+del = false; i = (i+1)%texts.length;
+}
+setTimeout(type, del ? 50 : 100);
+}
+type();
+
+const sppgImages = [
+    "assets/img/sppg1.png",
+    "assets/img/sppg2.png"
+];
+
+let current = 0;
+const imgElement = document.getElementById("sppg-img");
+
+// ambil dots
+const dots = [
+    document.getElementById("dot1"),
+    document.getElementById("dot2")
+];
+
+setInterval(() => {
+    current = (current + 1) % sppgImages.length;
+
+    imgElement.style.opacity = 0;
+
+    setTimeout(() => {
+        imgElement.src = sppgImages[current];
+        imgElement.style.opacity = 1;
+
+        // update dots
+        dots.forEach((dot, i) => {
+            dot.style.opacity = i === current ? "1" : "0.4";
+        });
+
+    }, 300);
+
+}, 3000);
+const btn = document.getElementById("btn");
+const mobile = document.getElementById("mobile");
+
+btn.addEventListener("click", () => {
+
+    mobile.classList.toggle("opacity-0");
+    mobile.classList.toggle("scale-95");
+    mobile.classList.toggle("pointer-events-none");
+
+});
+</script>
+<style>
+.bubble {
+  position: absolute;
+  bottom: -100px;
+  background: rgba(62, 193, 211, 0.25);
+  border-radius: 9999px;
+  animation: rise linear infinite;
+}
+
+/* ANIMASI NAIK + MEMUDAR */
+@keyframes rise {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    transform: translateY(-120vh) scale(0.6);
+    opacity: 0;
+  }
+}
+
+/* RANDOM SIZE + POSISI */
+.bubble:nth-child(1) {
+  left: 10%;
+  width: 20px;
+  height: 20px;
+  animation-duration: 12s;
+}
+
+.bubble:nth-child(2) {
+  left: 25%;
+  width: 35px;
+  height: 35px;
+  animation-duration: 18s;
+}
+
+.bubble:nth-child(3) {
+  left: 40%;
+  width: 15px;
+  height: 15px;
+  animation-duration: 10s;
+}
+
+.bubble:nth-child(4) {
+  left: 55%;
+  width: 50px;
+  height: 50px;
+  animation-duration: 22s;
+}
+
+.bubble:nth-child(5) {
+  left: 70%;
+  width: 25px;
+  height: 25px;
+  animation-duration: 14s;
+}
+
+.bubble:nth-child(6) {
+  left: 85%;
+  width: 40px;
+  height: 40px;
+  animation-duration: 20s;
+}
+
+.bubble:nth-child(7) {
+  left: 95%;
+  width: 18px;
+  height: 18px;
+  animation-duration: 11s;
+}
+
+.card-skill{
+@apply bg-[#020617]/80 backdrop-blur-md p-6 rounded-xl text-center 
+border border-white/5 
+hover:border-[#3EC1D3]/40 
+hover:shadow-[0_0_20px_rgba(62,193,211,0.25)] 
+hover:-translate-y-1 transition;
+}
+
+.project-card{
+@apply bg-[#0F172A] p-6 rounded-xl border border-white/10 
+hover:shadow-lg hover:-translate-y-1 transition;
+}
+
+.contact-card{
+@apply bg-[#020617]/80 px-6 py-4 rounded-xl 
+border border-white/10 
+hover:border-[#3EC1D3]/40 
+hover:scale-105 transition;
+}
+</style>
+
+
+</html>
