@@ -7,6 +7,40 @@
 <link rel="stylesheet" href="output.css">
 
 <style>
+
+    .dot {
+  width: 10px;
+  height: 10px;
+  background: #3EC1D3;
+  border-radius: 9999px;
+  animation: loading 1.2s infinite ease-in-out;
+}
+
+/* delay biar bergantian */
+.dot:nth-child(1) {
+  animation-delay: 0s;
+}
+.dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes loading {
+  0%, 80%, 100% {
+    transform: scale(0.3);
+    opacity: 0.3;
+  }
+  40% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+    #app {
+  opacity: 0;
+  visibility: hidden;
+}
 .typing::after {
   content: "|";
   margin-left: 5px;
@@ -19,6 +53,33 @@
 </head>
 
 <body class="bg-[#020617] text-slate-200 relative overflow-x-hidden pt-20">
+
+    <div id="preloader" class="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-[#020617] transition-all duration-700">
+
+    <!-- LOGO -->
+    <img src="assets/img/Logo MA.png"
+         class="w-16 h-16 mb-4 animate-pulse">
+
+    <!-- NAMA -->
+    <h2 class="text-[#3EC1D3] text-lg md:text-xl font-semibold tracking-widest mb-6">
+        MIZANI ALRIYZQI
+    </h2>
+
+    <!-- WELCOME -->
+    <h1 class="text-white text-3xl md:text-5xl font-bold tracking-[0.3em] mb-6 animate-pulse">
+        WELCOME TO MY PORTOFOLIO
+    </h1>
+
+    <!-- LOADING DOT -->
+    <div class="flex gap-2 mt-2">
+        <span class="w-2 h-2 bg-[#3EC1D3] rounded-full  dot"></span>
+        <span class="w-2 h-2 bg-[#3EC1D3] rounded-full  dot"></span>
+        <span class="w-2 h-2 bg-[#3EC1D3] rounded-full  dot"></span>
+    </div>
+
+</div>
+<div id="app" class="opacity-0 invisible transition-opacity duration-500">
+
 
     <div class="absolute inset-0 -z-10 overflow-hidden">
 
@@ -365,7 +426,7 @@ hover:shadow-[0_0_25px_rgba(62,193,211,0.25)] transition duration-300 hover:-tra
 <footer class="py-6 text-center text-gray-500">
 © 2026 Mizani Alriyzqi
 </footer>
-
+</div>
 </body>
 
 <script>
@@ -426,6 +487,26 @@ btn.addEventListener("click", () => {
     mobile.classList.toggle("scale-95");
     mobile.classList.toggle("pointer-events-none");
 
+});
+
+window.addEventListener("load", () => {
+    const preloader = document.getElementById("preloader");
+    const app = document.getElementById("app");
+
+    setTimeout(() => {
+        preloader.style.opacity = "0";
+
+        setTimeout(() => {
+            preloader.style.display = "none";
+
+            // tampilkan website
+            app.style.visibility = "visible";
+            app.style.opacity = "1";
+            app.style.transition = "opacity 0.6s ease";
+
+        }, 400);
+
+    }, 1500);
 });
 </script>
 <style>
