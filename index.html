@@ -90,55 +90,7 @@ header{
 
 <body>
 
-    <script>
-        const texts = ["Web Developer", "UI Designer", "Freelancer"];
-
-let i = 0;
-let j = 0;
-let del = false;
-
-function type(){
-
-let text = texts[i];
-
-document.getElementById("typing").textContent = text.substring(0,j);
-
-if(!del && j++ === text.length){
-    del = true;
-    setTimeout(type,1000);
-    return;
-}
-
-if(del && j-- === 0){
-    del = false;
-    i = (i + 1) % texts.length;
-}
-
-setTimeout(type, del ? 50 : 100);
-}
-
-type();
-
-window.addEventListener("load", () => {
-
-const preloader = document.getElementById("preloader");
-const app = document.getElementById("app");
-
-setTimeout(() => {
-
-    preloader.style.opacity = "0";
-
-    setTimeout(() => {
-
-        preloader.style.display = "none";
-        app.style.display = "block";
-
-    },500);
-
-},1500);
-
-});
-    </script>
+   
 
 <!-- PRELOADER -->
 <div id="preloader">
@@ -216,5 +168,61 @@ setTimeout(() => {
     <h2>Skills</h2>
 
     <div class="skill-grid">
+
+    </div>
+</section>
+</main>
+</div>
+    <script>
+        const texts = ["Web Developer", "UI Designer", "Freelancer"];
+
+let i = 0;
+let j = 0;
+let del = false;
+
+function type(){
+
+let text = texts[i];
+
+document.getElementById("typing").textContent = text.substring(0,j);
+
+if(!del && j++ === text.length){
+    del = true;
+    setTimeout(type,1000);
+    return;
+}
+
+if(del && j-- === 0){
+    del = false;
+    i = (i + 1) % texts.length;
+}
+
+setTimeout(type, del ? 50 : 100);
+}
+
+type();
+
+window.addEventListener("load", () => {
+
+const preloader = document.getElementById("preloader");
+const app = document.getElementById("app");
+
+setTimeout(() => {
+
+    preloader.style.opacity = "0";
+
+    setTimeout(() => {
+
+        preloader.style.display = "none";
+        app.style.display = "block";
+
+    },500);
+
+},1500);
+
+});
+    </script>
+</body>
+   
 
 </html>
